@@ -27,6 +27,7 @@ class MainActivity : ComponentActivity() {
     }
 }
 
+/** composable for passing [Greeting] into a column with input of list<String> */
 @Composable
 fun MyApp(names: List<String> = listOf("World", "Compose")) {
     Surface(color = MaterialTheme.colors.background) {
@@ -38,6 +39,7 @@ fun MyApp(names: List<String> = listOf("World", "Compose")) {
     }
 }
 
+/** Composable for Greeting UI and take String as input */
 @Composable
 fun Greeting(name: String) {
     Surface(
@@ -60,14 +62,11 @@ fun Greeting(name: String) {
             ) {
                 Text("Show more")
             }
-
-
         }
-
-
     }
 }
 
+/** Default preview of the app */
 @Preview(showBackground = true, name = "Text Preview", widthDp = 320)
 @Composable
 fun DefaultPreview() {
